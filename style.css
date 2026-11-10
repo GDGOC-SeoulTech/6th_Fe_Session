@@ -1,0 +1,86 @@
+
+:root {
+  --ink: #4a3b3b;        /* 그림 선 색과 맞춘 짙은 갈색 */
+  --paper: #fff6ec;      /* 배경 */
+  --pink: #ffd3dc;
+  --yellow: #fff0b8;
+  --mint: #eafcf3;
+  --accent: #f26b8a;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: var(--paper);
+  color: var(--ink);
+  margin: 0;
+  padding : 0 16px;
+}
+
+h1 {
+  color: var(--accent);
+  text-align: center;
+  font-weight : 900;
+  font-size : 2.2rem;
+}
+#title {
+    text-align : center;
+    color: var(--accent);
+}
+main {
+  max-width: 960px;
+  margin: 0 auto;
+}
+footer {
+     text-align: center;
+     padding: 24px 0 40px;
+     font-size: 0.9rem;
+     opacity: 0.7;
+}
+.card {
+    flex : 1;
+    background-color: var(--yellow);
+    border: 3px solid var(--ink);
+    border-radius: 24px;
+    box-shadow: 6px 6px 0 var(--ink);
+    padding : 20px;
+    margin : 20px;
+    text-align : center;
+}
+.cards {
+    display : flex;
+    justify-content : space-between;
+    gap : 8px;
+    margin-top : 20px;
+}
+
+nav{
+    display : flex;
+    justify-content : center;
+    gap : 12px;
+    flex-wrap : wrap;
+}
+
+nav a{
+    padding : 8px 22px;
+    background-color : var(--pink);
+    border : 2px solid var(--ink);
+    border-radius : 999px;
+    color : var(--ink);
+    text-decoration : none;
+    box-shadow : 0 3px 0 var(--ink);
+     transition: transform 0.15s, box-shadow 0.15s, background-color 0.15s;
+}
+
+@media (max-width: 720px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+ 
+  .cards {
+    flex-direction: column;
+  }
+}
+
+.card:nth-child(2) {
+  background-color: var(--mint);
+}
